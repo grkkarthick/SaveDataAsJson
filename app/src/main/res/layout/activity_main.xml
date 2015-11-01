@@ -1,0 +1,188 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20pt"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="20pt"
+            android:text="@string/registration_form"
+            android:textSize="12pt"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="end"
+                android:paddingTop="10pt"
+                android:text="@string/name"
+                android:textSize="10pt"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="90pt"
+                android:layout_height="fill_parent"
+                android:inputType="text" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="end"
+                android:paddingTop="10pt"
+                android:text="@string/email"
+                android:textSize="10pt"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="90pt"
+                android:layout_height="fill_parent"
+                android:inputType="textEmailAddress" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="end"
+                android:paddingTop="10pt"
+                android:text="@string/password"
+                android:textSize="10pt"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="90pt"
+                android:layout_height="fill_parent"
+                android:inputType="textPassword" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="end"
+                android:paddingTop="10pt"
+                android:text="@string/gender"
+                android:textSize="10pt"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/gender"
+                android:layout_width="90pt"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:paddingTop="8pt">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="40pt"
+                    android:layout_height="fill_parent"
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="40pt"
+                    android:layout_height="fill_parent"
+                    android:text="@string/female" />
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="end"
+                android:paddingTop="10pt"
+                android:text="@string/age"
+                android:textSize="10pt"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/age_group"
+                android:layout_width="90pt"
+                android:layout_height="fill_parent"
+                android:spinnerMode="dropdown"
+                android:entries="@array/age_group"
+                android:paddingTop="10pt">
+
+
+            </Spinner>
+        </TableRow>
+        <TableRow>
+            <Button android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:text="@string/submit"
+                android:layout_weight="1"
+                android:onClick="onSubmit"/>
+        </TableRow>
+    </TableLayout>
+
+
+</LinearLayout>
+
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:orientation="vertical">-->
+
+    <!--&lt;!&ndash;<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;--><!--&lt;!&ndash;android:weightSum="1">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+    <!--<LinearLayout--><!--android:layout_width="fill_parent"--><!--android:layout_height="60dp"--><!--android:background="@color/dim_foreground_material_dark"--><!--android:orientation="vertical">-->
+
+    <!--<TextView--><!--android:layout_width="fill_parent"--><!--android:layout_height="fill_parent"--><!--android:gravity="center"--><!--android:text="Registration"--><!--android:textColor="#000000"--><!--android:textSize="40dp"--><!--android:textStyle="bold"-->
+
+    <!--/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<TableLayout--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_gravity="center"--><!--android:layout_marginTop="40dp"--><!--android:id="@+id/registerTableLayout">-->
+
+    <!--<TableRow>-->
+
+    <!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:gravity="right"--><!--android:text="@string/txt_empName"--><!--android:textSize="40sp" />-->
+
+    <!--<EditText--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:padding="25dip"--><!--android:id="@+id/registerUserName"--><!--android:textSize="40sp" />--><!--</TableRow>-->
+
+    <!--<TableRow>-->
+
+    <!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:gravity="right"--><!--android:text="@string/txt_empId"--><!--android:textSize="40sp" />-->
+
+    <!--<EditText--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:padding="25dip"--><!--android:textSize="40sp" />--><!--</TableRow>-->
+
+    <!--<TableRow>-->
+
+    <!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:gravity="right"--><!--android:text="@string/txt_amount"--><!--android:textSize="40sp" />-->
+
+    <!--<EditText--><!--android:id="@+id/rechargeAmount"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:inputType="number"--><!--android:padding="25dip"--><!--android:textSize="40sp" />-->
+
+    <!--</TableRow>--><!--</TableLayout>-->
+
+    <!--<Button--><!--android:id="@+id/btn_registration"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_gravity="center_horizontal"--><!--android:layout_marginTop="20dp"--><!--android:onClick="register"--><!--android:text="Register"--><!--android:textSize="35dp" />--><!--</LinearLayout>-->
